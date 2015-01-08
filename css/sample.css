@@ -45,7 +45,7 @@ body {
 .content-body-list {
   padding-left: 0;
   font-weight: 600;
-  color: #6CB544;
+  color: purple;
   list-style-type: none; }
   .content-body-list .list-item {
     padding: 6px 0; }
@@ -71,7 +71,7 @@ body {
 .cta-button {
   display: inline-block;
   vertical-align: middle;
-  background-color: #6CB544;
+  background-color: purple;
   outline: none;
   color: #FFF;
   font-size: 18px;

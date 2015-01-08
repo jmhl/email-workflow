@@ -23,16 +23,17 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard 'livereload' do
-  watch(%r{templates/.+\.haml$})
-  watch(%r{scss/.+\.(scss|js|html)})
+guard :compass do
+  watch(%r{(.*)\.scss$})
 end
 
-# listener = Listen.to('templates', 'scss') do |modified, added, removed|
-#   puts modified
-#   # system('sass --watch scss:css')
-#   # system('ruby premailer.rb')
-# end
-#
-# listener.start
-# sleep
+guard :livereload do
+  watch(%r{build/.+\.html$})
+  watch(%r{css/.+\.css})
+end
+
+listener = Listen.to('templates', 'scss') do |modified, added, removed|
+  system('ruby premailer.rb')
+end
+
+listener.start
