@@ -1,5 +1,5 @@
 # Emails
-This is a better environment for creating emails than directly in Sailthru.
+This is a significantly less painful way to work with emails.
 
 ### Instructions
 + Clone the repo
