@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%html
+  %head
+    %meta{ :charset => "UTF-8" }
+      %title Sample 
+
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "../css/sample.css" }
+    %body
+      %table.email-container{ :cellpadding => "0", :cellspacing => "0" }
+        %tr
+          %td{ :align => "center" }
+            %table.content-table{ :cellpadding => "0", :cellspacing => "0"}
+              %tr
+                %td.content-borders
+                  %table.content-body{ :cellpadding => "0", :cellspacing => "0" }
+                    %tr
+                      %td.content-text
+                        %p
+                          This is a test email!
+                        %p
+                          You can put whatever you want here.
+                        %p
+                          It's really great!
+
+                        %ol.content-body-list
+                          %li.list-item
+                            %table
+                              %tr
+                                %td.li-left
+                                  +
+                                %td.li-right
+                                  %span.list-item-title Title 
+                                  %span.list-item-content
+                                    Blah blah blah
+                          %li.list-item
+                            %table
+                              %tr
+                                %td.li-left
+                                  +
+                                %td.li-right
+                                  %span.list-item-title Second title
+                                  %span.list-item-content
+                                    Blah blah blah blah blah blah
+
+                        %p
+                          The end
+                        %p
+                          %table.button-container
+                            %tr
+                              %td.button-content
+                                %a.cta-button{ :href=>"https://github.com/jmhl/email-workflow", :title=>"Get Started", :target=>"_blank"}
+                                  Github
+                        
+                        %p
+                          Bye,
+                          %br
+                          Name
+
+              %tr
+                %td.footer
+                  %a.footer-link{ :href => "" }
+                    Unsubscribe
+                  %br
