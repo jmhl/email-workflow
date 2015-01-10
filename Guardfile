@@ -27,14 +27,14 @@ guard :compass do
   watch(%r{(.*)\.scss$})
 end
 
-guard :haml, input: 'templates'
+guard :haml, input: 'haml', output: 'html'
 
 guard :livereload do
   watch(%r{build/.+\.html$})
   watch(%r{css/.+\.css})
 end
 
-listener = Listen.to('templates', 'scss') do |modified, added, removed|
+listener = Listen.to('html', 'css') do |modified, added, removed|
   system('ruby premailer.rb')
 end
 

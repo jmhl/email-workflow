@@ -1,11 +1,11 @@
 require 'premailer'
 
-templates = Dir['templates/*.haml']
+templates = Dir['haml/*.haml']
 templates = templates.map{ |template| template.sub(/.+\//, '').sub(/\..+/, '') }
 
 templates.each do |name|
   premailer = Premailer.new(
-    "templates/#{name}.html",
+    "html/#{name}.html",
     :warn_level => Premailer::Warnings::SAFE
   )
 
