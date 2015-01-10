@@ -4,7 +4,6 @@ templates = Dir['templates/*.haml']
 templates = templates.map{ |template| template.sub(/.+\//, '').sub(/\..+/, '') }
 
 templates.each do |name|
-  system "haml templates/#{name}.haml templates/#{name}.html"
   premailer = Premailer.new(
     "templates/#{name}.html",
     :warn_level => Premailer::Warnings::SAFE

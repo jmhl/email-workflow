@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'guard'
 gem 'guard-compass'
+gem 'guard-haml'
 gem 'guard-livereload'
 gem 'haml'
 gem 'listen', '~> 2.7'

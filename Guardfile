@@ -27,6 +27,8 @@ guard :compass do
   watch(%r{(.*)\.scss$})
 end
 
+guard :haml, input: 'templates'
+
 guard :livereload do
   watch(%r{build/.+\.html$})
   watch(%r{css/.+\.css})
